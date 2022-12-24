@@ -593,11 +593,15 @@ main {
     max-width:1440px;
     display:flex;
     flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-end;
     padding:6rem;
     gap:2rem;
 }
 .final-wrapper h2 {
-    font-size:3rem;
+    font-size:2rem;
+    width:100%;
+    
 }
 .right img {
     width:100%;
@@ -623,31 +627,64 @@ main {
 .left p {
     line-height:1.75;
     font-weight:200;
-    margin-top:1rem;
 }
 .left {
     display:flex;
     flex-direction:column;
     align-items: flex-start;
     gap:2rem;
+    align-self:flex-end;
 }
 .left button {
     padding:0.75rem 2rem;
     font-size:1rem;
 }
-/******************/
-.placeholder-section {
-    width:100%;
-    height:10rem;
-    background-color:var(--yellow);
-    position:absolute;
-    bottom:5%;
-    z-index:-1;
+@media (max-width:1208px) {
+    .final-wrapper h2 {
+        font-size:1.75rem;
+    }
+    .final-wrapper p {
+        font-size:0.9rem;
+    }
 }
+@media (max-width:1127px) {
+    .final-wrapper h2 {
+        font-size:2rem;
+    }
+    .final-wrapper p {
+        font-size:1rem;
+    }
+    .final-wrapper {
+        flex-direction: column;
+    }
+    .lower-half {
+        flex-direction:column-reverse;
+    }
+    .left,
+    .right {
+        width:100%;
+    }
+}
+@media (max-width:700px) {
+    .final-wrapper {
+        padding-inline:4rem;
+    }
+}
+@media (max-width:500px) {
+    .final-wrapper {
+        padding-inline:2rem;
+    }
+}
+@media (max-width:350px) {
+    .final-wrapper {
+        padding-inline:1rem;
+    }
+}
+/******************/
+
 /**************/
 footer {
     background-color:var(--yellow);
-    margin-top:-4rem;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -656,7 +693,7 @@ footer {
 .footer-wrapper {
     width:100%;
     padding:6rem;
-    padding-top:0rem;
+    padding-top:6rem;
     max-width:1440px;
     display:flex;
     flex-direction:column;
