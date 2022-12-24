@@ -496,3 +496,55 @@ main {
         font-size:2rem;
     }
 }
+/********* Meet the Family *********/
+.family-section {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--yellow);
+}
+.family-wrapper {
+    width:100%;
+    max-width:1440px;
+    padding:6rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    gap:8rem;
+    justify-content: center;
+    padding-bottom:12rem;
+    position:relative;
+}
+.family-titles h2 {
+    font-size:2.5rem;
+}
+.image-wrapper {
+    width:100%;
+    position:relative;
+}
+.image-wrapper img {
+    width:100%;
+    position:relative;
+    z-index:2;
+}
+.family-wrapper .background {
+    z-index:0;
+}
+.family-images {
+    display:grid;
+    width:(100%);
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.open {
+    position:absolute !important;
+    width:75px !important;
+    left:-10%;
+    bottom:-20%;
+    z-index:4 !important;
+}
